@@ -168,7 +168,18 @@ const ChatAssistant: React.FC = () => {
 
 Quedo atento a su respuesta. ¡Gracias!`;
     window.open(`https://wa.me/525512999642?text=${encodeURIComponent(m)}`, '_blank');
+    // Limpiar el chat al volver
+    setTimeout(() => {
+      setUserData({ nombre: '', area: '', motivo: '', modalidad: '', sede: '', horario: '' });
+      setCurrentStep(0);
+      setIsCompleted(false);
+      setMessages([]);
+      setShowOptions(false);
+      askedRef.current = new Set();
+      greetedRef.current = false;
+    }, 500);
   };
+
 
   return (
     <section id="chat" className="section">
