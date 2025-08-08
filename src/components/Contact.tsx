@@ -21,7 +21,7 @@ const Contact: React.FC = () => {
             
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a
-                href="https://wa.me/525511223344?text=Hola%20Dr.%20Walfred%2C%20me%20gustaría%20agendar%20una%20consulta."
+                href="https://wa.me/525512999642?text=Hola%20Dr.%20Walfred%2C%20me%20gustaría%20agendar%20una%20consulta."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn--primary"
@@ -30,7 +30,7 @@ const Contact: React.FC = () => {
                 WhatsApp
               </a>
               
-              <a href="tel:5511223344" className="btn btn--outline">
+              <a href="tel:5512999642" className="btn btn--outline">
                 <Phone size={18} />
                 Llamar
               </a>
