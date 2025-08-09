@@ -11,7 +11,7 @@ const Locations: React.FC = () => {
       address: 'Av Presidente Masaryk 134-Int. 402. Polanco, Polanco V Secc, Miguel Hidalgo',
       mapUrl: 'https://www.google.com/maps/place/Av+Presidente+Masaryk+134,+Polanco,+Miguel+Hidalgo,+11550+Ciudad+de+México,+CDMX/',
       embedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.515292545234!2d-99.19199168509015!3d19.433579686907754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92004c2e4c9%3A0x8b6d3d9c4e3d4e4e!2sAv%20Presidente%20Masaryk%20134%2C%20Polanco%2C%20Miguel%20Hidalgo%2C%2011550%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses!2smx!4v1647890123456!5m2!1ses!2smx',
-      image: 'https://home.briyamcoworkingmedico.com/wp-content/uploads/2024/05/Briyam-Sucursal-Masaryk-02.webp'
+      image: 'https://home.briyamcoworkingmedico.com/masaryk/wp-content/uploads/2024/05/Briyam-Sucursal-Masaryk-5.webp'
     },
     {
       name: 'Briyam Medical Center Santa Fe',

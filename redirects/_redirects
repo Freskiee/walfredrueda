@@ -1,0 +1,6 @@
+# Ejemplo de reglas para Netlify o Vercel
+# Redirige /antigua a /nueva
+/antigua   /nueva   301
+
+# Redirige todo a index.html para SPA
+/*  /index.html   200

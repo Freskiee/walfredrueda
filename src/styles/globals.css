@@ -53,7 +53,7 @@ h2 {
   font-size: clamp(18px, 2.2vw, 22px);
   font-weight: 600;
   line-height: 1.4;
-  margin: 0 0 1rem 0;
+  margin: 0 0 2.5rem 0; /* Aumenta separación debajo del título */
   color: var(--muted);
   position: relative;
 }
@@ -61,11 +61,21 @@ h2 {
 h2::after {
   content: '';
   position: absolute;
-  bottom: -8px;
+  bottom: -14px; /* Baja la línea aún más */
   left: 0;
   width: 60px;
-  height: 2px;
+  height: 3px;
   background: linear-gradient(to right, var(--accent), transparent);
+}
+
+@media (max-width: 640px) {
+  h2 {
+    margin-bottom: 2.8rem;
+  }
+  h2::after {
+    bottom: -18px;
+    height: 4px;
+  }
 }
 
 h3 {
