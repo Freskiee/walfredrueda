@@ -384,7 +384,7 @@ const ChatAssistant: React.FC = () => {
 • Horario: ${userData.horario}
 
 Quedo atento a su respuesta. ¡Gracias!`;
-    window.open(`https://wa.me/525511223344?text=${encodeURIComponent(m)}`, '_blank');
+    window.open(`https://wa.me/525512999642?text=${encodeURIComponent(m)}`, '_blank');
     setTimeout(resetFlow, 500);
   };
 
