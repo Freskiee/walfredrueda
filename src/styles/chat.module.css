@@ -273,3 +273,27 @@
   0%, 60%, 100% { transform: translateY(0); }
   30%          { transform: translateY(-10px); }
 }
+
+
+/* Botones de volver fuera del card */
+.backRowOutside {
+  display: flex;
+  gap: .5rem;
+  justify-content: center;
+  margin-top: 1rem;     /* aire respecto al card */
+  margin-bottom: .5rem; /* aire respecto a lo que sigue */
+}
+
+.backBtn {
+  padding: 0.45rem .75rem;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: 999px;
+  font-size: 13.5px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.backBtn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}

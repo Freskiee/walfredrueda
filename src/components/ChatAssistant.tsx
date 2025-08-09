@@ -451,28 +451,6 @@ Quedo atento a su respuesta. ¡Gracias!`;
                   )}
                 </div>
 
-                {/* Controles de cambio (fuera del scroll) */}
-                <div className={styles.backRow}>
-                  {userData.area && currentStep >= stepIndexByField('motivo') && !isCompleted && (
-                    <button
-                      type="button"
-                      className={styles.backBtn}
-                      onClick={() => goToStep(stepIndexByField('area'))}
-                    >
-                      ← Cambiar área
-                    </button>
-                  )}
-                  {userData.modalidad && currentStep >= stepIndexByField('sede') && !isCompleted && (
-                    <button
-                      type="button"
-                      className={styles.backBtn}
-                      onClick={() => goToStep(stepIndexByField('modalidad'))}
-                    >
-                      ← Cambiar modalidad
-                    </button>
-                  )}
-                </div>
-
                 {/* Opciones */}
                 {!isCompleted && (
                   <div className={styles.chatOptions} ref={optionsRef}>
@@ -633,6 +611,30 @@ Quedo atento a su respuesta. ¡Gracias!`;
                   </div>
                 )}
               </div>
+
+              {!isCompleted && (userData.area || userData.modalidad) && (
+                <div className={styles.backRowOutside}>
+                  {userData.area && currentStep >= stepIndexByField('motivo') && (
+                    <button
+                      type="button"
+                      className={styles.backBtn}
+                      onClick={() => goToStep(stepIndexByField('area'))}
+                    >
+                      ← Cambiar área
+                    </button>
+                  )}
+                  {userData.modalidad && currentStep >= stepIndexByField('sede') && (
+                    <button
+                      type="button"
+                      className={styles.backBtn}
+                      onClick={() => goToStep(stepIndexByField('modalidad'))}
+                    >
+                      ← Cambiar modalidad
+                    </button>
+                  )}
+                </div>
+              )}
+
             </div>
           )}
         </div>
