@@ -30,7 +30,7 @@ const Services: React.FC = () => {
           ref={ref}
           className={`reveal ${isVisible ? 'reveal--visible' : ''}`}
         >
-          <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Servicios</h2>
+          <h2 className="vgl-title" style={{ marginBottom: '3rem' }}>Servicios</h2>
           
           <div className="grid grid--3">
             {services.map((service, index) => (

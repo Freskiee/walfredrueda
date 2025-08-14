@@ -28,18 +28,19 @@ const Schedule: React.FC = () => {
 
   return (
     <section id="schedule" className="section">
+      <h2 className="vgl-title">Horarios</h2>
       <div className="container">
         <div
           ref={ref}
           className={`reveal ${isVisible ? 'reveal--visible' : ''}`}
+          style={{ marginTop: '2.2rem' }}
         >
-          <h2 style={{ textAlign: 'center', marginBottom: '1rem' }}>Horarios</h2>
           <p style={{ textAlign: 'center', marginBottom: '3rem', fontSize: '18px', color: 'var(--muted)' }}>
             <Monitor size={18} style={{ display: 'inline', marginRight: '8px', verticalAlign: 'middle' }} />
             Consultas en línea y presencial
           </p>
           
-          <div className="grid grid--3">
+          <div className="grid grid--3" style={{ gap: '1.2rem' }}>
             {schedules.map((schedule, index) => (
               <div key={index} className="card" style={{ textAlign: 'center' }}>
                 <div style={{ color: 'var(--accent)', marginBottom: '1rem', display: 'flex', justifyContent: 'center' }}>

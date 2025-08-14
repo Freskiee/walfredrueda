@@ -26,13 +26,14 @@ const Payments: React.FC = () => {
 
   return (
     <section id="payments" className="section">
+      <h2 className="vgl-title">Métodos de Pago</h2>
       <div className="container">
         <div
           ref={ref}
           className={`reveal ${isVisible ? 'reveal--visible' : ''}`}
           style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto' }}
         >
-          <h2>Métodos de Pago</h2>
+          
           
           <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginTop: '2rem', flexWrap: 'wrap' }}>
             {paymentMethods.map((method, index) => (

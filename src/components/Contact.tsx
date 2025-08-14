@@ -13,8 +13,8 @@ const Contact: React.FC = () => {
           ref={ref}
           className={`reveal ${isVisible ? 'reveal--visible' : ''}`}
         >
-          <div className={styles.body}>
-            <h2 className={styles.title}>Contacto</h2>
+          <div className={styles.body} style={{ marginTop: '2.2rem' }}>
+            <h2 className="vgl-title">Contacto</h2>
 
             <p className={styles.desc}>
               Estoy aquí para acompañarte en tu proceso de bienestar mental y sexual.

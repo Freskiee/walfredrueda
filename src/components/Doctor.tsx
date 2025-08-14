@@ -4,11 +4,11 @@ import { useReveal } from '../utils/useReveal';
 const Doctor: React.FC = () => {
   const { ref, isVisible } = useReveal();
 
-  // Estilos del contenedor de imagen y la imagen
+  // Contenedor de imagen con proporción estable y sin recortes
   const figureStyle: React.CSSProperties = {
     width: '100%',
-    aspectRatio: '4 / 3',      // mantiene proporción responsiva
-    maxHeight: '540px',        // límite cómodo en desktop
+    aspectRatio: '4 / 3',
+    maxHeight: '540px',
     borderRadius: '16px',
     overflow: 'hidden',
     background: 'var(--panel, #f3f4f6)',
@@ -20,7 +20,7 @@ const Doctor: React.FC = () => {
   const imgStyle: React.CSSProperties = {
     width: '100%',
     height: '100%',
-    objectFit: 'contain',      // 👉 muestra la imagen completa, sin recortes
+    objectFit: 'contain', // muestra la imagen completa
     objectPosition: 'center',
     display: 'block',
   };
@@ -31,33 +31,44 @@ const Doctor: React.FC = () => {
         <div
           ref={ref}
           className={`grid grid--2 reveal ${isVisible ? 'reveal--visible' : ''}`}
-          style={{ alignItems: 'center', gap: '4rem' }}
+          style={{ alignItems: 'center', gap: '3rem' }}
         >
+          {/* Foto */}
           <div className="image" style={figureStyle}>
             <img
               src="/images/drWalter.png"
               alt="Dr. Walfred Rueda"
               loading="lazy"
               style={imgStyle}
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 980px) 100vw, 50vw"
             />
           </div>
 
+          {/* Texto */}
           <div>
-            <h2>Sobre el Doctor</h2>
-            <div style={{ marginTop: '2rem', textAlign: 'left' }}>
+            <h2 className="vgl-title">Sobre el Doctor</h2>
+
+            <div className="doc-text">
               <p>
-                Médico Cirujano egresado de la UNAM con especialidad en Psiquiatría por el Instituto Nacional de Psiquiatría Ramón de la Fuente Muñiz (INPRFM).
-                Cuenta con Maestría en Ciencias Médicas por la UNAM y Alta Especialidad en Trastorno Obsesivo Compulsivo y Trastornos Relacionados por el INPRFM.
+                Médico Cirujano por la Universidad Nacional Autónoma de México (UNAM), con especialidad en
+                Psiquiatría por la UNAM y el Instituto Nacional de Psiquiatría Ramón de la Fuente Muñiz.
               </p>
               <p>
-                Certificado por el Consejo Mexicano de Psiquiatría (CIMAT) y con formación en Terapia Cognitivo Conductual.
-                Actualmente cursa el Doctorado en Sexualidad Humana por el Instituto Mexicano de Sexología y la Maestría en Terapia Sexual por el
-                Centro de Investigación en Sexualidad Humana.
+                Cuenta con una Maestría en Ciencias Médicas por la misma institución, así como una Alta
+                Especialidad en Trastorno Obsesivo-Compulsivo y Neurofisiología Cognitiva en Psiquiatría
+                (UNAM–INPRFM).
               </p>
               <p>
-                Su enfoque integra la medicina basada en evidencia con un trato humano y personalizado, creando un ambiente de confianza
-                para abordar tanto la salud mental como la salud sexual de sus pacientes.
+                Posee formación en Estadística por el Centro de Investigación en Matemáticas (CIMAT) y estudios
+                en Terapia Cognitivo-Conductual para Trastornos de la Alimentación por el Centro de Psicoterapia
+                Cognitivo Conductual.
+              </p>
+              <p>
+                Es Doctor en Sexualidad Humana por la Asociación Mexicana para la Salud Sexual A.C. (AMSSAC) y la
+                Universidad Nexum de México.
+              </p>
+              <p>
+                Actualmente cursa la Maestría en Terapia Sexual, con enfoque clínico e interdisciplinario.
               </p>
             </div>
           </div>

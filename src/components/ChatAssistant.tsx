@@ -390,10 +390,11 @@ Quedo atento a su respuesta. ¡Gracias!`;
 
   // ---------- RENDER ----------
   return (
-    <section id="chat" className="section">
+    <section id="chat-assistant" className="section section--alt">
+      <h2 className="vgl-title">Chat Asistente</h2>
       <div className="container">
-        <div ref={ref} className={`reveal ${isVisible ? 'reveal--visible' : ''}`}>
-          <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Chat Asistente</h2>
+        <div ref={ref} className={`reveal ${isVisible ? 'reveal--visible' : ''}`} style={{ marginTop: '1.5rem' }}>
+          
 
           {isVisible && (
             <div style={{ maxWidth: 800, margin: '0 auto' }}>

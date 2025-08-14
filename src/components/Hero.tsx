@@ -38,15 +38,16 @@ const Hero: React.FC = () => {
             <h1 style={{ fontSize: 'clamp(32px, 5vw, 48px)', lineHeight: '1.1', marginBottom: '0.5rem' }}>
               Psiquiatría con calidez humana y rigor científico
             </h1>
+            <br />
             <p style={{ fontSize: 'clamp(18px, 2.5vw, 24px)', color: 'var(--muted)', marginBottom: '1.5rem', fontWeight: 400 }}>
               Acompañamiento integral para tu salud mental y sexual
             </p>
 
-            <div className="chips">
+            {/* <div className="chips">
               <span className="chip">Consultas en línea y presencial</span>
               <span className="chip">Atención adulta</span>
               <span className="chip">Espacio libre de estigmas</span>
-            </div>
+            </div> */}
 
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2rem', flexWrap: 'wrap' }}>
               <a
