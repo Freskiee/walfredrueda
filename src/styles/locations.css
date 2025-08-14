@@ -100,3 +100,50 @@
   #locations .container,
   .loc-grid, .loc-card, .loc-hero, .loc-map { max-width:100%; overflow-x:clip; }
   
+  /* ---- Toggle mapa ---- */
+.loc-toggle{
+  margin: .2rem 1rem .6rem;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  border-radius: 999px;
+  padding: .5rem .8rem;
+  font-size: .92rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease, color .15s ease, transform .15s ease;
+}
+.loc-toggle:hover{
+  background: #f8fafc;
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+/* ---- Estado colapsable del mapa ---- */
+.loc-map{
+  margin: 0 1rem .9rem;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #e5e7eb;
+  height: var(--loc-map-h);           /* por defecto */
+  transition: height .25s ease, margin .25s ease;
+}
+.loc-map iframe{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* Cerrado */
+.loc-map.is-collapsed{
+  height: 0;
+  margin: 0 1rem 0;
+}
+
+/* Abierto (explícito por claridad) */
+.loc-map.is-open{
+  height: var(--loc-map-h);
+}

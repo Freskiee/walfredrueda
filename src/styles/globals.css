@@ -342,3 +342,139 @@ a:hover {
     transform: none;
   }
 }
+
+/* ===== Doctor section: más aire y legibilidad ===== */
+.doc-grid { 
+  gap: 2.5rem; 
+}
+
+/* Imagen más contenida */
+.doc-figure {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  max-height: 520px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--panel);
+}
+.doc-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* se ve completa */
+  display: block;
+}
+
+/* Texto y lista */
+.doc-copy { 
+  text-align: left; 
+}
+.doc-list {
+  margin: 1.2rem 0 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: .65rem;
+  color: var(--text);
+  font-size: 16.5px;
+  line-height: 1.6;
+}
+.doc-list li { 
+  list-style: disc; 
+}
+
+/* Colapsable solo en móvil */
+.doc-bio {
+  position: relative;
+  transition: max-height .25s ease;
+}
+.doc-bio.is-collapsed {
+  max-height: 210px; /* ~3-4 viñetas visibles */
+  overflow: hidden;
+}
+.doc-bio.is-open {
+  max-height: 1000px; /* suficiente para todo el texto */
+}
+
+/* Gradiente de desvanecido al final cuando está colapsado */
+.doc-fade {
+  position: absolute;
+  left: 0; 
+  right: 0; 
+  bottom: 0;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0), var(--bg));
+  display: none;
+}
+.doc-bio.is-collapsed .doc-fade { 
+  display: block; 
+}
+
+/* Botón "ver más" */
+.doc-moreBtn-wrap {
+  display: none; /* Oculto por defecto, visible en móvil */
+}
+.doc-moreBtn {
+  margin-top: .75rem;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  padding: .5rem .9rem;
+  border-radius: 999px;
+  font-size: .95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease, transform .15s ease;
+}
+.doc-moreBtn:hover {
+  background: #f8fafc;
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+/* ===== Ajustes responsive ===== */
+
+/* Móvil: colapsable activo y botón visible */
+@media (max-width: 979px) {
+  .doc-moreBtn-wrap {
+    display: block;
+  }
+  .doc-figure { 
+    aspect-ratio: 16 / 10; 
+    max-height: 360px; 
+  }
+  .doc-list { 
+    font-size: 15.5px; 
+    line-height: 1.65; 
+    gap: .55rem; 
+  }
+}
+
+/* Pantallas muy pequeñas */
+@media (max-width: 560px) {
+  .doc-grid { 
+    gap: 1.4rem; 
+  }
+  .doc-figure { 
+    aspect-ratio: 16 / 11; 
+    max-height: 300px; 
+  }
+  .doc-bio.is-collapsed { 
+    max-height: 180px; /* menos texto visible */
+  }
+}
+
+/* PC: siempre abierto, sin fade ni botón */
+@media (min-width: 980px) {
+  .doc-bio {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  .doc-fade {
+    display: none !important;
+  }
+  .doc-moreBtn-wrap {
+    display: none !important;
+  }
+}
+
